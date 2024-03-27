@@ -1,8 +1,9 @@
 CREATE TABLE ciudad(
-	id_lugar_origen number,
+	id_ciudad number,
 	ciudad_origen nvarchar2(100) not null, 
 	ciudad_destino nvarchar2(100) not null, 
 	ciudad_adicional nvarchar(50)
+	constraint pk_id_ciudad primary key (id_ciudad)
 );
 	 
 
@@ -12,23 +13,43 @@ CREATE TABLE hotel(
 	nombre_hotel nvarchar2(30) not null,
 	ciudad nvarchar2(50) not null,
 	categoria nvarchar2(10) not null
+	constraint pk_id_hotel primary key (id_hotel)
+	constraint fk_id_reserva_hotel foreign key (id_reserva_hotel) references RESERVA_HOTEL (id_reserva_hotel));
+
 	
-CREATE TABLE SOLICITUD_RESERVA
+CREATE TABLE SOLICITUD_RESERVA(
 	id_solicitud number, 
 	fecha_solicitud dateTime not null,
 	id_cliente number, 
 	id_ciudad number,
 	id_reserva number, 
 	id_estado number,
-	
+	constraint pk_id_solicitud primary key (id_solicitud)
+	constraint fk_id_cliente foreign key (id_cliente) references cliente (id_cliente)
+	constraint fk_id_ciudad foreign key (id_ciudad) references ciudad (id_ciudad)
+	constraint fk_id_reserva foreign key (id_reserva) references reserva (id_reserva)
+	constraint fk_id_estado foreign key (id_estado) references estado (id_estado)
+);
+
 CREATE TABLE estado(
 	id_estado number, 
 	comprobacion nvarchar2(10),
-    fecha_aprobacion dateTime
+    fecha_aprobacion dateTime,
+	id_pago number,
+	id_reserva number,
+
+	constraint pk_id_estado primary key (id_estado)
+	constraint fk_id_pago foreign key (id_pago) references pago (id_pago)
+	constraint fk_id_reserva foreign key (id_reserva) references reserva (id_reserva)
+	constraint fk_id_cliente foreign key (id_cliente) references cliente (id_cliente)
+);
+	
 	
 CREATE TABLE aerolinea(
 	id_aerolinea number,
 	nombre_aerolinea nvarchar2(40) not null,
+	constraint pk_id_aerolinea primary key (id_aerolinea)
+);
 
 CREATE TABLE pago(
 	id_pago number, 
@@ -68,6 +89,7 @@ CREATE TABLE reserva(
 	id_cliente number, 
 	Numero_Viajeros number, 
 	id_reserva_hotel number, 
+	
 	
 CREATE TABLE cliente(
 	id_cliente number,
