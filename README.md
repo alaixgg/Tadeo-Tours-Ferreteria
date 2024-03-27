@@ -1,23 +1,33 @@
 Proyecto Asignatura Programación de Bases de Datos
+
 El entregable del proyecto de la asignatura Programación de Bases de Datos, es un
 documento que contenga los detalles técnicos de implementación de un esquema
 de bases de datos para el manejo de información en el proceso de reservas de
 tiquetes aéreos, alojamiento y paquetes turísticos, de la agencia de viajes Tadeo
-Tours. A continuación la estructura de documento sugerida:
+Tours. 
+
+A continuación la estructura de documento sugerida:
+
 Tabla de Contenido
 Introducción: Contexto del negocio, antecedentes, justificación, generalidades del
 proyecto.
+
 1. Objetivos: A nivel del proyecto, de cara al negocio, y en el ámbito académico.
+
 2. Alcance del proyecto: Declaración y delimitación de alcance, descripción de los
 requerimientos en términos generales. Restricciones o excepciones.
+
 3. Modelo de Datos:
 a. Diagrama modelo conceptual (Entidad – Relación) o diagrama de clases,
 diseño lógico, diseño físico.
 b. Diccionario del esquema de base de datos.
+
 4. Catalogación de scripts para creación de objetos (tablas, índices, secuencias,
 vistas, sinónimos, procedimientos, funciones, paquetes), parametrización y
 cargue de datos, consultas requeridas.
+
 5. Guía de instalación.
+
 6. Consultas: Sentencias SQL para atender los siguientes requerimientos de
 consulta:
 a. Reporte (Listado) de las solicitudes de reserva registradas en un periodo
@@ -45,6 +55,7 @@ nombre de la aerolínea y la cantidad de reservas confirmadas.
 g. Top 5 de los hoteles preferidos por los clientes de la agencia en un periodo
 (fecha inicio – fecha fin), con base en el número de reservas. Desplegar el
 nombre del hotel y la cantidad de reservas confirmadas.
+
 7. Construcción de paquete almacenado que contenga los siguientes subprogramas:
 a. Procedimiento para registro de cliente.
 b. Procedimiento para registro de solicitud de reserva de tiquetes aéreos y/o
@@ -58,6 +69,9 @@ confirmadas).
 f. Función que calcule el tiempo promedio por reserva en un periodo (El tiempo
 de una reserva se obtiene con la diferencia entre la fecha de reserva y la
 fecha de registro de la solicitud).
+
 8. Conclusiones y recomendaciones
+
 9. Bibliografía
+
 10. Anexos
