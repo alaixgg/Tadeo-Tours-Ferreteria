@@ -105,7 +105,12 @@ CREATE TABLE VIAJERO(
 	id_cliente number, 
 	edad number,
 	
-CREATE TABLE fecha_reserva(
+CREATE TABLE fecha_reserva(si null)
+	full page porn sbc c 
+	hdmi page--- (fifa´sclub)
+	hornitos null 
+	(200copas)
+	key null full table 3 mesa que mas aplauda full drinks for everytibhg
 	id_fecha_reserva number,
 	fecha_inicio_reserva datetime not null,
 	fecha_fin_reserva datetime not null,
