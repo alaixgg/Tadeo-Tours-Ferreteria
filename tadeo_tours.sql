@@ -88,7 +88,7 @@ CREATE TABLE RESERVA_HOTEL(
 	fecha_entreda datetime not null, 
 	fecha_salida datetime not null, 
 	tipo_acomodacion nvarchar2(10) not null,
-	constraint pk_id_reserva_hotel primary key (id_hotel)
+	constraint pk_id_reserva_hotel primary key (id_reserva_hotel)
 );
 	
 CREATE TABLE reserva(
@@ -97,15 +97,14 @@ CREATE TABLE reserva(
 	id_reserva_hotel number,
 	id_pago number,
 	id_cliente number,
-	id_cliente number, 
 	Numero_Viajeros number, 
-	id_reserva_hotel number, 
-	constraint pk_id_vuelo primary key (id_vuelo)
+	id_estado number, 
+	constraint pk_id_reserva primary key (id_reserva)
 	constraint fk_id_reserva_avion foreign key (id_reserva_avion) references RESERVA_AVION (id_reserva_avion)
 	constraint fk_id_reserva_hotel foreign key (id_reserva_hotel) references RESERVA_HOTEL (id_reserva_hotel)
 	constraint fk_id_pago foreign key (id_pago) references pago (id_pid_aerolinea)
 	constraint fk_id_cliente foreign key (id_cliente) references cliente (id_cliente)
-	constraint fk_id_aerolinea foreign key (id_aerolinea) references pago (id_pid_aerolinea)
+	constraint fk_id_estado foreign key (id_estado) references estado (id_estado)
 );
 
 	
@@ -132,5 +131,9 @@ CREATE TABLE fecha_reserva(
 	fecha_inicio_reserva datetime not null,
 	fecha_fin_reserva datetime not null,
 	constraint pk_id_fecha_reserva primary key (id_fecha_reserva)
+	/*CONSTRAINT fk_fecha_reserva_reserva_inicio FOREIGN KEY (fecha_inicio_reserva) REFERENCES reserva(fecha_inicio_reserva),
+	CONSTRAINT fk_fecha_reserva_reserva_fin FOREIGN KEY (fecha_fin_reserva) REFERENCES reserva(fecha_fin_reserva);
+	CONTRAINT SUGERIDO POR CHATGPT JAJJAJAJ
+	"En la tabla fecha_reserva, podría ser útil agregar restricciones de clave foránea si estas fechas están relacionadas con alguna otra entidad."*/
 );
 	
