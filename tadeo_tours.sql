@@ -1,7 +1,7 @@
 CREATE TABLE ciudad(
 	id_ciudad number,
 	ciudad_origen nvarchar2(100) not null, 
-	ciudad_destino nvarchar2(100) not null, 
+	ciudad_destino nvarchar2(100) not null, b
 	ciudad_adicional nvarchar(50)
 	constraint pk_id_ciudad primary key (id_ciudad)
 );
