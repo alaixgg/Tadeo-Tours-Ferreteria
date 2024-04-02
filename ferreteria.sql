@@ -76,7 +76,7 @@ create table factura(
   id_pedido number, 
   fecha_factura datetime,
   id_pago number,
-  constraint pk_factura primary key (id_factura)
+  constraint pk_id_factura primary key (id_factura)
   constraint fk_id_pago foreign key (id_pago) references pago (id_pago)
 );
 
@@ -87,8 +87,33 @@ create table producto(
   almacenamiento_producto nvarchar2(30),
   precio number,
   marca nvarchar2(20),
-  constraint pk_producto primary key (id_producto)
+  constraint pk_id_producto primary key (id_producto)
   constraint fk_proveedor foreign key (id_proveedor) references proveedor (id_proveedor)
 );
+CREATE TABLE inventarios (
+    ID_INVENTARIO NUMBER(6),
+    ID_PRODUCTO NUMBER(6),
+    CANTIDAD_PRODUCTOS_INVENTARIO NUMBER(6) NOT NULL,
+    constraint id_ID_INVENTARIO primary key (ID_INVENTARIO)
+    CONSTRAINT fk_producto FOREIGN KEY (ID_PRODUCTO) REFERENCES productos(ID_PRODUCTO)
+);
 
+create table compra_proveedor(
+  id_compra_provedor number,
+  id_productos number,
+  id_proveedor number, 
+  cantidad_productos number,
+  precio number, 
+  constraint id_compra_provedor primary key (id_compra_provedo)
+  constraint fk_inventario foreign key (id_inventario) references inventario (id_inventario)
+  constraint fk_proveedor foreign key (id_proveedor) references proveedor (id_proveedor)
+	);
+CREATE TABLE detalle_producto (
+    ID_DETALLE_PRODUCTO NUMBER(6),
+    DETALLES_PRODUCTO NVARCHAR2(300) NOT NULL,
+    CANTIDAD_PRODUCTOS NUMBER(6) NOT NULL,
+    ID_PRODUCTO NUMBER(6),
+    CONSTRAINT pk_id_detalle_producto PRIMARY KEY (ID_DETALLE_PRODUCTO),
+    CONSTRAINT fk_id_producto FOREIGN KEY (ID_PRODUCTO) REFERENCES producto(ID_PRODUCTO)
+);
 
