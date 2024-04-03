@@ -167,16 +167,18 @@ INSERT INTO reserva (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id
 (215, 415, 115, 315, 1015, 6, 'Aprobado' );
 
 -- INSERT INTO cliente
+-- SEQUENCE seq_cliente
+
 INSERT INTO cliente (id_cliente, nombre_cliente, telefono_casa, telefono_trabajo, fax, email, direccion) VALUES
-(1001, 'Juan Pérez', '1234567890', '0987654321', '9876543210', 'juan@example.com', 'Calle 123, Bogotá'),
-(1002, 'María Gómez', '0987654321', '1234567890', '0123456789', 'maria@example.com', 'Carrera 456, Medellín'),
-(1003, 'Luis Rodriguez', '2345678901', '3456789012', '1234567890', 'luis@example.com', 'Avenida 789, Cali'),
-(1004, 'Ana Martínez', '3456789012', '4567890123', '2345678901', 'ana@example.com', 'Calle 901, Barranquilla'),
-(1005, 'Sebastian Sánchez', '4567890143', '5676901234', '3486789012', 'sebastian@example.com', 'Carrera 234, Cali'),
-(1006, 'Andres Jimenez', '4567890163', '5678901234', '3456709012', 'andres@example.com', 'Carrera 234, Medellin'),
-(1007, 'Camila Villalobos', '4567870123', '56o4901234', '3496789012', 'camila@example.com', 'Carrera 234, Bogotá'),
-(1008, 'cristian Hernandez', '4567790123', '5078901234', '3656789012', 'cristians@example.com', 'Carrera 234, Pereira'),
-(1009, 'Carlota Vega', '4567890128', '5778901234', '3456789n12', 'carlota@example.com', 'Carrera 234, Cartagena'),
+(seq_cliente.NEXTVAL, 'Juan Pérez', '1234567890', '0987654321', '9876543210', 'juan@example.com', 'Calle 123, Bogotá'),
+(seq_cliente.NEXTVAL, 'María Gómez', '0987654321', '1234567890', '0123456789', 'maria@example.com', 'Carrera 456, Medellín'),
+(seq_cliente.NEXTVAL, 'Luis Rodriguez', '2345678901', '3456789012', '1234567890', 'luis@example.com', 'Avenida 789, Cali'),
+(seq_cliente.NEXTVAL, 'Ana Martínez', '3456789012', '4567890123', '2345678901', 'ana@example.com', 'Calle 901, Barranquilla'),
+(seq_cliente.NEXTVAL, 'Sebastian Sánchez', '4567890143', '5676901234', '3486789012', 'sebastian@example.com', 'Carrera 234, Cali'),
+(seq_cliente.NEXTVAL, 'Andres Jimenez', '4567890163', '5678901234', '3456709012', 'andres@example.com', 'Carrera 234, Medellin'),
+(seq_cliente.NEXTVAL, 'Camila Villalobos', '4567870123', '56o4901234', '3496789012', 'camila@example.com', 'Carrera 234, Bogotá'),
+(seq_cliente.NEXTVAL, 'cristian Hernandez', '4567790123', '5078901234', '3656789012', 'cristians@example.com', 'Carrera 234, Pereira'),
+(seq_cliente.NEXTVAL, 'Carlota Vega', '4567890128', '5778901234', '3456789n12', 'carlota@example.com', 'Carrera 234, Cartagena');
 
 
 

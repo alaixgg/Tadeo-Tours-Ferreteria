@@ -1,10 +1,4 @@
-create table cargo(
-    id_cargo number , 
-    nombre_cargo nvarchar2(30) not null,
-    salario number not null,
-    constraint pk_id_cargo primary key (id_cargo)
-);
- 
+
 create table empleado(
 	id_empleado number,
     nombre_empleado nvarchar2(15) not null,
@@ -12,7 +6,8 @@ create table empleado(
     id_cargo number ,
     correo_empleado nvarchar2(15) not null,
     telefono_empleado number,
-    constraint fk_id_cargo foreign key (id_cargo) references cargo (id_cargo),
+    cargo nvarchar2(30) not null,
+    salario number not null,
     constraint pk_id_empleado primary key (id_empleado)
 )
 create table venta(
@@ -87,6 +82,8 @@ create table producto(
   almacenamiento_producto nvarchar2(30),
   precio number,
   marca nvarchar2(20),
+  DETALLES_PRODUCTO NVARCHAR2(300) NOT NULL,
+  CANTIDAD_PRODUCTOS NUMBER(6) NOT NULL,
   constraint pk_id_producto primary key (id_producto)
   constraint fk_proveedor foreign key (id_proveedor) references proveedor (id_proveedor)
 );
@@ -108,12 +105,4 @@ create table compra_proveedor(
   constraint fk_inventario foreign key (id_inventario) references inventario (id_inventario)
   constraint fk_proveedor foreign key (id_proveedor) references proveedor (id_proveedor)
 	);
-CREATE TABLE detalle_producto (
-    ID_DETALLE_PRODUCTO NUMBER(6),
-    DETALLES_PRODUCTO NVARCHAR2(300) NOT NULL,
-    CANTIDAD_PRODUCTOS NUMBER(6) NOT NULL,
-    ID_PRODUCTO NUMBER(6),
-    CONSTRAINT pk_id_detalle_producto PRIMARY KEY (ID_DETALLE_PRODUCTO),
-    CONSTRAINT fk_id_producto FOREIGN KEY (ID_PRODUCTO) REFERENCES producto(ID_PRODUCTO)
-);
 
