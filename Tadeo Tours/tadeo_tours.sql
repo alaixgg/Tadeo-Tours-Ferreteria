@@ -2,9 +2,10 @@ CREATE TABLE ciudad(
 	id_ciudad number,
 	ciudad_origen nvarchar2(100) not null, 
 	ciudad_destino nvarchar2(100) not null, 
-	ciudad_adicional nvarchar(50)
+	ciudad_adicional nvarchar(50),
 	constraint pk_id_ciudad primary key (id_ciudad)
 );
+
 	 
 
 CREATE TABLE hotel(
@@ -12,7 +13,7 @@ CREATE TABLE hotel(
 	id_reserva_hotel number,
 	nombre_hotel nvarchar2(30) not null,
 	ciudad nvarchar2(50) not null,
-	categoria nvarchar2(10) not null
+	categoria nvarchar2(10) not null,
 	constraint pk_id_hotel primary key (id_hotel)
 	constraint fk_id_reserva_hotel foreign key (id_reserva_hotel) references RESERVA_HOTEL (id_reserva_hotel));
 
@@ -131,9 +132,6 @@ CREATE TABLE fecha_reserva(
 	fecha_inicio_reserva datetime not null,
 	fecha_fin_reserva datetime not null,
 	constraint pk_id_fecha_reserva primary key (id_fecha_reserva)
-	/*CONSTRAINT fk_fecha_reserva_reserva_inicio FOREIGN KEY (fecha_inicio_reserva) REFERENCES reserva(fecha_inicio_reserva),
-	CONSTRAINT fk_fecha_reserva_reserva_fin FOREIGN KEY (fecha_fin_reserva) REFERENCES reserva(fecha_fin_reserva);
-	CONTRAINT SUGERIDO POR CHATGPT JAJJAJAJ
-	"En la tabla fecha_reserva, podría ser útil agregar restricciones de clave foránea si estas fechas están relacionadas con alguna otra entidad."*/
+
 );
 	
