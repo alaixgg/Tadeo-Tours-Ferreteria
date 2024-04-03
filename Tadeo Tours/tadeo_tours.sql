@@ -132,9 +132,6 @@ CREATE TABLE fecha_reserva(
 	fecha_inicio_reserva datetime not null,
 	fecha_fin_reserva datetime not null,
 	constraint pk_id_fecha_reserva primary key (id_fecha_reserva)
-	/*CONSTRAINT fk_fecha_reserva_reserva_inicio FOREIGN KEY (fecha_inicio_reserva) REFERENCES reserva(fecha_inicio_reserva),
-	CONSTRAINT fk_fecha_reserva_reserva_fin FOREIGN KEY (fecha_fin_reserva) REFERENCES reserva(fecha_fin_reserva);
-	CONTRAINT SUGERIDO POR CHATGPT JAJJAJAJ
-	"En la tabla fecha_reserva, podría ser útil agregar restricciones de clave foránea si estas fechas están relacionadas con alguna otra entidad."*/
+
 );
 	
