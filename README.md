@@ -1,4 +1,6 @@
 https://github.com/alaixgg/Tadeo-Tours-Ferreteria
+Diagrama Tadeo Tours: https://lucid.app/lucidchart/e72e7232-f72a-4f98-ad9d-22d832741846/edit?viewport_loc=-1180%2C-923%2C2994%2C1452%2C0_0&invitationId=inv_351128f5-9177-4e0c-9a98-01120f757bc4
+
 Proyecto Asignatura Programación de Bases de Datos
 
 El entregable del proyecto de la asignatura Programación de Bases de Datos, es un
