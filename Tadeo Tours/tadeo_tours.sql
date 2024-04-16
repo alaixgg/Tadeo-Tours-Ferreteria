@@ -15,7 +15,7 @@ CREATE TABLE hotel(
 	ciudad nvarchar2(50) not null,
 	categoria nvarchar2(10) not null,
 	constraint pk_id_hotel primary key (id_hotel)
-	constraint fk_id_reserva_hotel foreign key (id_reserva_hotel) references RESERVA_HOTEL (id_reserva_hotel));
+	
 
 	
 CREATE TABLE SOLICITUD_RESERVA(
@@ -90,6 +90,7 @@ CREATE TABLE RESERVA_HOTEL(
 	fecha_salida datetime not null, 
 	tipo_acomodacion nvarchar2(10) not null,
 	constraint pk_id_reserva_hotel primary key (id_reserva_hotel)
+	constraint fk_id_hotel foreign key (id_hotel) references hotel (id_hotel));
 );
 	
 CREATE TABLE reserva(
@@ -101,7 +102,7 @@ CREATE TABLE reserva(
 	Numero_Viajeros number, 
 	id_estado number, 
 	constraint pk_id_reserva primary key (id_reserva)
-	constraint fk_id_reserva_avion foreign key (id_reserva_avion) references RESERVA_AVION (id_reserva_avion)
+	constraint fk_id_vuelo foreign key (id_vuelo) references vuelo (id_vuelo)
 	constraint fk_id_reserva_hotel foreign key (id_reserva_hotel) references RESERVA_HOTEL (id_reserva_hotel)
 	constraint fk_id_pago foreign key (id_pago) references pago (id_pid_aerolinea)
 	constraint fk_id_cliente foreign key (id_cliente) references cliente (id_cliente)
