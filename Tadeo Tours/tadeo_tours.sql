@@ -79,7 +79,7 @@ CREATE TABLE RESERVA_HOTEL(
 
 CREATE TABLE reserva(
     id_reserva number,
-    id_reserva_avion number, 
+    id_vuelo number, 
     id_reserva_hotel number,
     id_pago number,
     id_cliente number,
