@@ -123,7 +123,7 @@ REFERENCES estado (id_estado);
 
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_fecha_reserva
-FOREIGN KEY (id_reserva) 
+FOREIGN KEY (id_fecha) 
 REFERENCES FECHA(id_fecha);
 
 ALTER TABLE RESERVA
