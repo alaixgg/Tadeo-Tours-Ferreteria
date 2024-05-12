@@ -126,7 +126,6 @@ ADD CONSTRAINT fk_fecha_reserva
 FOREIGN KEY (id_reserva) 
 REFERENCES FECHA(id_fecha);
 
-
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_solicitud_reserrva
 FOREIGN KEY (id_solicitud)
