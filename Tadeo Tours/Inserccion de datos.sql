@@ -211,6 +211,16 @@ INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_i
 INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 8, 'Paula', 27);
 INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 9, 'Daniel', 32);
 INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 10, 'Sofia', 29);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 11, 'Luis', 35);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 12, 'María', 28);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 13, 'Carlos', 42);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 14, 'Laura', 29);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 15, 'Pedro', 38);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 16, 'Ana', 31);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 17, 'Diego', 45);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 18, 'Lucía', 27);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 19, 'Martín', 33);
+INSERT INTO VIAJERO (id_viajero, id_cliente, nombre_viajero, edad) VALUES (seq_id_viajero.nextval, 20, 'Sofía', 40);
 
 
 -- Inserciones para la tabla SOLICITUD_RESERVA
