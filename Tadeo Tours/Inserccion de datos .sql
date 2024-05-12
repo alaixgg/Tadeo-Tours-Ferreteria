@@ -1,3 +1,6 @@
+
+--OJO, LEER ANTES DE CORRER EL CODIGO https://github.com/alaixgg/Tadeo-Tours-Ferreteria/issues/7
+
 -- Inserciones para la tabla FECHA
 INSERT INTO FECHA (id_fecha, fecha_inicio, fecha_fin) VALUES (seq_id_fecha.nextval, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-01-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 INSERT INTO FECHA (id_fecha, fecha_inicio, fecha_fin) VALUES (seq_id_fecha.nextval, TO_TIMESTAMP('2024-02-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-02-15 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
