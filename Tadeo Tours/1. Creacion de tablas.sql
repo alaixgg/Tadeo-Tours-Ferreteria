@@ -79,6 +79,7 @@ CREATE TABLE RESERVA(
     Numero_Viajeros number, 
     id_estado number UNIQUE, 
     id_solicitud number UNIQUE,
+    id_fecha TIMESTAMP,
     constraint pk_id_reserva primary key (id_reserva)
 );
 
