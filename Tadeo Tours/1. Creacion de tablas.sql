@@ -50,7 +50,7 @@ CREATE TABLE VUELO(
     numero_vuelo number,
     id_fecha number,
     id_ciudad_origen number,
-    id_ciudad_destino,
+    id_ciudad_destino number,
     constraint pk_id_vuelo primary key (id_vuelo)
 );
 
@@ -106,5 +106,5 @@ CREATE TABLE FECHA(
     id_fecha number,
     fecha_inicio timestamp not null, 
     fecha_fin timestamp not null,
-    constraint pk_id_fecha_reserva primary key (id_fecha_reserva)
+    constraint pk_id_fecha_reserva primary key (id_fecha)
 );
