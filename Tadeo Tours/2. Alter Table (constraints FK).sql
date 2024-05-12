@@ -24,7 +24,7 @@ REFERENCES estado (id_estado);
 
 //Pago
 
-ALTER TABLE SOLICITUD_RESERVA
+ALTER TABLE pago
 ADD CONSTRAINT fk_estado_pago
 FOREIGN KEY (id_estado)
 REFERENCES estado (id_estado);
@@ -43,16 +43,16 @@ FOREIGN KEY (id_fecha)
 REFERENCES fecha(id_fecha);
 
 
-ALTER TABLE SOLICITUD_RESERVA
+ALTER TABLE vuelo
 ADD CONSTRAINT fk_ciudad_origen_v
-FOREIGN KEY (id_ciudad)
-REFERENCES ciudad (id_ciudad);
+FOREIGN KEY (id_ciudad_origen) -- Cambiado a la columna correcta
+REFERENCES ciudad(id_ciudad);
 
-ALTER TABLE SOLICITUD_RESERVA
+
+ALTER TABLE vuelo
 ADD CONSTRAINT fk_ciudad_destino_v
-FOREIGN KEY (id_ciudad)
-REFERENCES ciudad (id_ciudad);
-
+FOREIGN KEY (id_ciudad_destino) -- Cambiado a la columna correcta
+REFERENCES ciudad(id_ciudad);
 
 //reserva avion
 
@@ -97,7 +97,8 @@ REFERENCES cliente(id_cliente);
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_reserva_avion
 FOREIGN KEY (id_reserva_avion)
-REFERENCES id_reserva_avion(id_reserva_avion);
+REFERENCES RESERVA_AVION(id_reserva_avion);
+
 
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_reserva_hotel
@@ -105,24 +106,26 @@ FOREIGN KEY (id_reserva_hotel)
 REFERENCES RESERVA_HOTEL(id_reserva_hotel);
 
 ALTER TABLE RESERVA
-ADD CONSTRAINT fk_reserva_pago
+ADD CONSTRAINT fk_pago_reserva
 FOREIGN KEY (id_pago)
 REFERENCES pago (id_pago);
 
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_cliente_reserva
 FOREIGN KEY (id_cliente)
-REFERENCES cliente(id_cliente)
+REFERENCES cliente(id_cliente);
+
 
 ALTER TABLE RESERVA
-ADD CONSTRAINT fk_pago_reserva
+ADD CONSTRAINT fk_reserva_pago
 FOREIGN KEY (id_estado)
 REFERENCES estado (id_estado);
 
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_fecha_reserva
-FOREIGN KEY (id_fecha)
-REFERENCES fecha(id_fecha);
+FOREIGN KEY (id_reserva) 
+REFERENCES FECHA(id_fecha);
+
 
 ALTER TABLE RESERVA
 ADD CONSTRAINT fk_solicitud_reserrva
@@ -130,4 +133,3 @@ FOREIGN KEY (id_solicitud)
 REFERENCES SOLICITUD_RESERVA(id_solicitud);
 
 //
-
