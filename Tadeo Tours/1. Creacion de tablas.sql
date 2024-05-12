@@ -58,7 +58,7 @@ CREATE TABLE RESERVA_AVION(
     id_reserva_avion number,
     id_vuelo number,
     id_viajero number,
-    clase nvarchar2(10) not null, 
+    clase nvarchar2(60) not null, 
     constraint pk_id_reserva_avion primary key (id_reserva_avion)
 );
 
