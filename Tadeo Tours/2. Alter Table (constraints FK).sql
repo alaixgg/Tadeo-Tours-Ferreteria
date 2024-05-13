@@ -2,8 +2,8 @@
 //Solicitud de reserva 
 
 ALTER TABLE SOLICITUD_RESERVA
-ADD CONSTRAINT fk_fecha_solicitud
-FOREIGN KEY (id_fecha)
+ADD CONSTRAINT fk_fecha_viaje
+FOREIGN KEY (id_fecha_viaje)
 REFERENCES fecha(id_fecha);
 
 ALTER TABLE SOLICITUD_RESERVA
