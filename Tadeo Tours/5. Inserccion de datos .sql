@@ -1,4 +1,5 @@
 
+
 --OJO, LEER ANTES DE CORRER EL CODIGO https://github.com/alaixgg/Tadeo-Tours-Ferreteria/issues/7
 
 -- Inserciones para la tabla FECHA
@@ -230,26 +231,66 @@ INSERT INTO RESERVA_AVION (id_reserva_avion, id_vuelo, id_viajero, clase) VALUES
 
 
 -- Inserciones para la tabla SOLICITUD_RESERVA
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 1, 1, 3, 1);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 2, 2, 5, 2);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 3, 3, 7, 3);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 4, 4, 9, 4);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 5, 5, 11, 5);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 6, 6, 13, 6);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 7, 7, 15, 7);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 8, 8, 17, 8);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 9, 9, 19, 9);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 10, 10, 2, 10);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 11, 11, 4, 11);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 12, 12, 6, 12);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 13, 13, 8, 13);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 14, 14, 10, 14);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 15, 15, 12, 15);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 16, 16, 14, 16);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 17, 17, 16, 17);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 18, 18, 18, 18);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 19, 19, 20, 19);
-INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha, id_cliente, id_ciudad, id_estado) VALUES (seq_id_solicitud.nextval, 20, 20, 1, 20);
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 1, 1, 3, 1, 2, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 2, 2, 5, 2, 6, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 3, 3, 7, 3, 8, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 4, 4, 9, 4, 10, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 5, 5, 11, 5, 12, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 6, 6, 13, 6, 14, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 7, 7, 15, 7, 16, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 8, 8, 17, 8, 18, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 9, 9, 19, 9, 20, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 10, 10, 2, 10, 3, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 11, 11, 4, 11, 5, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 12, 12, 6, 12, 7, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 13, 13, 8, 13, 9, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 14, 14, 10, 14, 11, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 15, 15, 12, 15, 13, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 16, 16, 14, 16, 15, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 17, 17, 16, 17, 17, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 18, 18, 18, 18, 19, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 19, 19, 20, 19, 1, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO SOLICITUD_RESERVA (id_solicitud, id_fecha_viaje, id_cliente, id_ciudad, id_estado, id_ciudad_origen, fecha_solicitud) 
+VALUES (seq_id_solicitud.nextval, 20, 20, 1, 20, 2, TO_TIMESTAMP('2024-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
 
 
 --Pago
@@ -276,22 +317,22 @@ INSERT INTO PAGO (id_pago, total, saldo, metodo_pago, fecha_pago, id_estado) VAL
 
 
 -- Inserciones para la tabla RESERVA
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5021, 1001, 10000, 1, 1, 1, 1, 1, 2, TIMESTAMP '2024-05-13 10:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5022, 1002, 10001, 2, 2, 2, 2, 2, 1, TIMESTAMP '2024-05-13 11:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5023, 1003, 10002, 3, 3, 3, 3, 3, 1, TIMESTAMP '2024-05-13 12:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5024, 1004, 10003, 4, 4, 4, 4, 4, 1, TIMESTAMP '2024-05-13 13:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5025, 1005, 10004, 5, 5, 5, 5, 5, 1, TIMESTAMP '2024-05-13 14:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5026, 1006, 10005, 6, 6, 6, 6, 6, 1, TIMESTAMP '2024-05-13 15:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5027, 1007, 10006, 7, 7, 7, 7, 7, 2, TIMESTAMP '2024-05-13 16:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5028, 1008, 10007, 8, 8, 8, 8, 8, 3, TIMESTAMP '2024-05-13 17:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5029, 1009, 10008, 9, 9, 9, 9, 9, 4, TIMESTAMP '2024-05-13 18:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5030, 1010, 10009, 10, 10, 10, 10, 10, 4, TIMESTAMP '2024-05-13 19:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5031, 1011, 10010, 11, 11, 11, 11, 11, 4, TIMESTAMP '2024-05-13 20:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5033, 1012, 10011, 12, 12, 12, 12, 12, 6, TIMESTAMP '2024-05-13 21:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5034, 1013, 10012, 13, 13, 13, 13, 13, 5, TIMESTAMP '2024-05-13 22:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5035, 1014, 10013, 14, 14, 14, 14, 14, 5, TIMESTAMP '2024-05-13 23:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5036, 1015, 10014, 15, 15, 15, 15, 15, 5, TIMESTAMP '2024-05-14 00:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5037, 1016, 10015, 16, 16, 16, 16, 16, 1, TIMESTAMP '2024-05-14 01:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5038, 1017, 10016, 17, 17, 17, 17, 17, 2, TIMESTAMP '2024-05-14 02:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5039, 1018, 10017, 18, 18, 18, 18, 18, 9, TIMESTAMP '2024-05-14 03:00:00');
-INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha_viaje , ID_CIUDAD_ORIGEN, fecha_solicitud) VALUES (seq_id_reserva.nextval, 5042, 1019, 10018, 19, 19, 19, 19, 19, 9, TIMESTAMP '2024-05-14 04:00:00');
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, ID_FECHA) VALUES (seq_id_reserva.nextval, 5001, 1001, 10000, 1, 1, 1, 1, 1);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5002, 1002, 10001, 2, 2, 2, 2, 2);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5003, 1003, 10002, 3, 3, 3, 3, 3);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5004, 1004, 10003, 4, 4, 4, 4,4);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5005, 1005, 10004, 5, 5, 5, 5,5);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5006, 1006, 10005, 6, 6, 6, 6,6);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5007, 1007, 10006, 7, 7, 7, 7,7);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5008, 1008, 10007, 8, 8, 8, 8,8);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5009, 1009, 10008, 9, 9, 9, 9,9);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5010, 1010, 10009, 10, 10, 10, 10,10);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5011, 1011, 10010, 11, 11, 11, 11,11);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5012, 1012, 10011, 12, 12, 12, 12, 12);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5013, 1013, 10012, 13, 13, 13, 13,13);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5014, 1014, 10013, 14, 14, 14, 14, 14);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5015, 1015, 10014, 15, 15, 15, 15,15);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5016, 1016, 10015, 16, 16, 16, 16,16);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5017, 1017, 10016, 17, 17, 17, 17,17);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5018, 1018, 10017, 18, 18, 18, 18,18);
+INSERT INTO RESERVA (id_reserva, id_reserva_avion, id_reserva_hotel, id_pago, id_cliente, Numero_Viajeros, id_estado, id_solicitud, id_fecha) VALUES (seq_id_reserva.nextval, 5019, 1019, 10018, 19, 19, 19, 19,19);
