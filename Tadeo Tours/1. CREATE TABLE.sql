@@ -18,7 +18,7 @@ CREATE TABLE SOLICITUD_RESERVA(
     id_cliente number, 
     id_ciudad number,
     id_estado number UNIQUE,
-    id_ciudad_origen number;
+    id_ciudad_origen number,
     fecha_solicitud timestamp,
     constraint pk_id_solicitud primary key (id_solicitud)
 );
