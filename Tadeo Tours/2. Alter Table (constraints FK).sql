@@ -21,6 +21,11 @@ ADD CONSTRAINT fk_estado_solitud
 FOREIGN KEY (id_estado)
 REFERENCES estado (id_estado);
 
+ALTER TABLE SOLICITUD_RESERVA
+ADD CONSTRAINT fk_id_ciudad_origen_solicitud
+FOREIGN KEY (id_ciudad_origen)
+REFERENCES CIUDAD(id_ciudad);
+
 
 //Pago
 
