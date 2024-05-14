@@ -43,6 +43,75 @@ LEFT JOIN AEROLINEA a ON v.id_aerolinea = a.id_aerolinea
 LEFT JOIN pago p ON r.id_pago = p.id_pago;
 
 --c
+SELECT 
+    cid_destino.nombre_ciudad AS nombre_ciudad_destino,
+    COUNT(r.id_reserva) AS cantidad_reservas
+FROM RESERVA r
+INNER JOIN SOLICITUD_RESERVA sr ON r.id_solicitud = sr.id_solicitud
+INNER JOIN CIUDAD cid_destino ON sr.id_ciudad = cid_destino.id_ciudad
+INNER JOIN ESTADO e ON sr.id_estado = e.id_estado
+WHERE e.comprobacion = 'Aprobado'
+GROUP BY cid_destino.nombre_ciudad
+ORDER BY cantidad_reservas DESC
+FETCH FIRST 5 ROWS ONLY;
 
+--d
+
+SELECT 
+    cid_destino.nombre_ciudad AS nombre_ciudad_destino,
+    SUM(r.numero_viajeros) AS numero_viajeros
+FROM RESERVA r
+INNER JOIN SOLICITUD_RESERVA sr ON r.id_solicitud = sr.id_solicitud
+INNER JOIN CIUDAD cid_destino ON sr.id_ciudad = cid_destino.id_ciudad
+INNER JOIN ESTADO e ON sr.id_estado = e.id_estado
+WHERE e.comprobacion = 'Aprobado'
+GROUP BY cid_destino.nombre_ciudad
+ORDER BY numero_viajeros DESC
+FETCH FIRST 5 ROWS ONLY;
+
+
+--e
+SELECT 
+    cid_destino.nombre_ciudad AS nombre_ciudad_destino,
+    SUM(p.total) AS ingresos_reservas
+FROM RESERVA r
+INNER JOIN SOLICITUD_RESERVA sr ON r.id_solicitud = sr.id_solicitud
+INNER JOIN CIUDAD cid_destino ON sr.id_ciudad = cid_destino.id_ciudad
+INNER JOIN PAGO p ON r.id_pago = p.id_pago
+INNER JOIN ESTADO e ON sr.id_estado = e.id_estado
+WHERE e.comprobacion = 'Aprobado'
+GROUP BY cid_destino.nombre_ciudad
+ORDER BY ingresos_reservas DESC
+FETCH FIRST 5 ROWS ONLY;
+
+
+--f
+SELECT 
+    a.nombre_aerolinea,
+    COUNT(r.id_reserva) AS cantidad_reservas
+FROM RESERVA r
+INNER JOIN RESERVA_AVION ra ON r.id_reserva_avion = ra.id_reserva_avion
+INNER JOIN VUELO v ON ra.id_vuelo = v.id_vuelo
+INNER JOIN AEROLINEA a ON v.id_aerolinea = a.id_aerolinea
+INNER JOIN SOLICITUD_RESERVA sr ON r.id_solicitud = sr.id_solicitud
+INNER JOIN ESTADO e ON sr.id_estado = e.id_estado
+WHERE e.comprobacion = 'Aprobado'
+GROUP BY a.nombre_aerolinea
+ORDER BY cantidad_reservas DESC
+FETCH FIRST 5 ROWS ONLY;
+
+--g 
+SELECT 
+    h.nombre_hotel,
+    COUNT(r.id_reserva) AS cantidad_reservas
+FROM RESERVA r
+INNER JOIN SOLICITUD_RESERVA sr ON r.id_solicitud = sr.id_solicitud
+INNER JOIN RESERVA_HOTEL rh ON r.id_reserva_hotel = rh.id_reserva_hotel
+INNER JOIN HOTEL h ON rh.id_hotel = h.id_hotel
+INNER JOIN ESTADO e ON sr.id_estado = e.id_estado
+WHERE e.comprobacion = 'Aprobado'
+GROUP BY h.nombre_hotel
+ORDER BY cantidad_reservas DESC
+FETCH FIRST 5 ROWS ONLY;
 
 
